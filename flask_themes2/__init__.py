@@ -418,7 +418,7 @@ class ThemeManager(object):
         self._themes = {}
         for theme in starchain(ldr(self.app) for ldr in self.loaders):
             if self.valid_app_id(theme.application):
-                self.themes[theme.identifier] = theme
+                self._themes[theme.identifier] = theme
 
 
 class Theme(object):
